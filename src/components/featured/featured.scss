@@ -2,7 +2,7 @@
   height: 600px;
   display: flex;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   background-color: #013914;
   color: white;
   .container {
@@ -60,8 +60,6 @@
         align-items: center;
         gap: 10px;
 
-        span {
-        }
         button {
           color: white;
           background-color: transparent;
