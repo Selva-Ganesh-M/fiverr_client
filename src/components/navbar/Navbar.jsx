@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import "./navbar.scss"
-// import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 
 const Navbar = () => {
     //#region : declarations
-
+    const { pathname } = useLocation()
     //#endregion
 
     //#region : custom-declarations
@@ -38,12 +38,12 @@ const Navbar = () => {
 
     //jsx rendering
     return (
-        <div className={active ? "navbar active" : 'navbar'} >
+        <div className={active || pathname !== "/" ? "navbar active" : 'navbar'} >
             <div className="container">
                 <div className="logo">
-                    {/* <Link to="/" > */}
-                    <span className='text' >fiverr</span>
-                    {/* </Link> */}
+                    <Link className='link' to="/" >
+                        <span className='text' >fiverr</span>
+                    </Link>
                     <span className='dot'>.</span>
                 </div>
                 <div className="links">
@@ -65,14 +65,14 @@ const Navbar = () => {
                                         {
                                             currentUser.isSeller && (
                                                 <>
-                                                    <span>Gigs</span>
-                                                    <span>Add new gig</span>
+                                                    <Link className='link' to="/mygigs">Gigs</Link>
+                                                    <Link className='link' to="/add">Add new gig</Link>
                                                 </>
                                             )
                                         }
-                                        <span>Order</span>
-                                        <span>Messages</span>
-                                        <span>Logout</span>
+                                        <Link className='link' to="/orders">Order</Link>
+                                        <Link className='link' to="/messages">Messages</Link>
+                                        <Link className='link' to="/">Logout</Link>
                                     </div>
                                 }
                             </div>
@@ -81,11 +81,36 @@ const Navbar = () => {
                 </div>
             </div>
             {
-                active && <>
+                active || pathname !== "/" && <>
                     <hr />
                     <div className="menu">
-                        <span>Test1</span>
-                        <span>Test2</span>
+                        <Link className="link menuLink" to="/">
+                            Graphics & Design
+                        </Link>
+                        <Link className="link menuLink" to="/">
+                            Video & Animation
+                        </Link>
+                        <Link className="link menuLink" to="/">
+                            Writing & Translation
+                        </Link>
+                        <Link className="link menuLink" to="/">
+                            AI Services
+                        </Link>
+                        <Link className="link menuLink" to="/">
+                            Digital Marketing
+                        </Link>
+                        <Link className="link menuLink" to="/">
+                            Music & Audio
+                        </Link>
+                        <Link className="link menuLink" to="/">
+                            Programming & Tech
+                        </Link>
+                        <Link className="link menuLink" to="/">
+                            Business
+                        </Link>
+                        <Link className="link menuLink" to="/">
+                            Lifestyle
+                        </Link>
                     </div>
                 </>
             }
