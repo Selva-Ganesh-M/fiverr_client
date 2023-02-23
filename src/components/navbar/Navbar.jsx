@@ -81,7 +81,7 @@ const Navbar = () => {
                 </div>
             </div>
             {
-                active || pathname !== "/" && <>
+                (active && pathname === "/") || pathname !== "/" ? <>
                     <hr />
                     <div className="menu">
                         <Link className="link menuLink" to="/">
@@ -112,7 +112,7 @@ const Navbar = () => {
                             Lifestyle
                         </Link>
                     </div>
-                </>
+                </> : ""
             }
         </div>
     )
