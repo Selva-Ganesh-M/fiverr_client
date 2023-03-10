@@ -47,10 +47,15 @@ const Navbar = () => {
                     <span className='dot'>.</span>
                 </div>
                 <div className="links">
-                    <span>Liverr Business</span>
+                    {/* <span>Liverr Business</span>
                     <span>Explore</span>
                     <span>English</span>
-                    <span>Sign In</span>
+                    <span>Sign In</span> */}
+                    <Link className='link' to="/mygigs">Gigs</Link>
+                    <Link className='link' to="/add">Add new gig</Link>
+                    <Link className='link' to="/orders">Order</Link>
+                    <Link className='link' to="/messages">Messages</Link>
+                    <Link className='link' to="/">Logout</Link>
                     {!currentUser.isSeller && <span>Become a Seller</span>}
                     {!currentUser && <button>Join</button>}
                     {
