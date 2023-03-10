@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Messages.scss";
+import "./messages.scss";
 
 const Messages = () => {
     const currentUser = {

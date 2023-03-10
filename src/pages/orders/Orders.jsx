@@ -1,5 +1,5 @@
 import React from "react";
-import "./Orders.scss";
+import "./orders.scss";
 
 const Orders = () => {
     const currentUser = {

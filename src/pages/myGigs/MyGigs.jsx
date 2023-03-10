@@ -1,5 +1,5 @@
 import React from 'react'
-import "./mygigs.scss"
+import "./myGigs.scss"
 import { Link } from "react-router-dom"
 
 const MyGigs = () => {

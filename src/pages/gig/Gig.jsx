@@ -1,6 +1,6 @@
 import React from "react";
-import "./Gig.scss";
-import Categories from "../../components/NSlider/NSlider";
+import "./gig.scss";
+// import Categories from "../../components/NSlider/NSlider";
 
 function Gig() {
     return (
@@ -28,7 +28,7 @@ function Gig() {
                     </div>
 
                     {/* slider */}
-                    <Categories></Categories>
+                    {/* <Categories></Categories> */}
 
                     <h2>About This Gig</h2>
                     <p>
